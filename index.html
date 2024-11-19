@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Lanchonete do Abner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="back-button">&larr;</button>
+    <h1>LANCHONETE DO ABNER</h1>
+  </header>
+  <div class="cart-container">
+    <!-- Item 1 -->
+    <div class="cart-item">
+      <img src="hamburguer.png" alt="Hambúrguer">
+      <div class="item-info">
+        <h3>Hambúrguer - R$ 10,00</h3>
+        <div class="quantity">
+          <button onclick="decrementItem('hamburguer')">-</button>
+          <span id="hamburguer-quantity">1</span>
+          <button onclick="incrementItem('hamburguer')">+</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Item 2 -->
+    <div class="cart-item">
+      <img src="refrigerante.png" alt="Refrigerante">
+      <div class="item-info">
+        <h3>Refrigerante - R$ 5,00</h3>
+        <div class="quantity">
+          <button onclick="decrementItem('refrigerante')">-</button>
+          <span id="refrigerante-quantity">1</span>
+          <button onclick="incrementItem('refrigerante')">+</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Total -->
+    <div class="total-section">
+      <h2>TOTAL: R$ <span id="total-price">15,00</span></h2>
+    </div>
+    <!-- Payment Options -->
+    <div class="payment-section">
+      <h3>Forma de pagamento</h3>
+      <div class="payment-options">
+        <label><input type="radio" name="payment" value="pix"> Pix</label>
+        <label><input type="radio" name="payment" value="credito"> Crédito</label>
+        <label><input type="radio" name="payment" value="debito"> Débito</label>
+      </div>
+      <button class="finalize-button">Finalizar compra</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
