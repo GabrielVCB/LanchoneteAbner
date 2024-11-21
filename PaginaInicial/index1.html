@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete do Abner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <h1>Lanchonete do Abner</h1>
+    </header>
+    <aside id="sidebar">
+        <div class="contact">Fale Conosco – (81)91234-5678 📞</div>
+        <a href="carrinho.html">Carrinho de Compras</a>
+        <a href="pedidos.html">Pedidos</a>
+        <div class="address">
+            149, R. dos Palmares, 127 – Santo Amaro, Recife – PE, 74970-240
+        </div>
+    </aside>
+    <main>
+        <div class="product-list">
+            <div class="product">
+                <img src="hamburguer.jpg" alt="Hambúrguer">
+                <p>Hambúrguer - R$ 10,00</p>
+                <button onclick="addToCart('Hambúrguer', 10)">+ Adicionar</button>
+            </div>
+            <div class="product">
+                <img src="sopa.jpg" alt="Sopa de Feijão">
+                <p>Sopa de Feijão - R$ 8,00</p>
+                <button onclick="addToCart('Sopa de Feijão', 8)">+ Adicionar</button>
+            </div>
+            <div class="product">
+                <img src="coxinha.jpg" alt="Coxinha">
+                <p>Coxinha - R$ 5,00</p>
+                <button onclick="addToCart('Coxinha', 5)">+ Adicionar</button>
+            </div>
+            <div class="product">
+                <img src="refrigerante.jpg" alt="Refrigerante">
+                <p>Refrigerante - R$ 5,00</p>
+                <button onclick="addToCart('Refrigerante', 5)">+ Adicionar</button>
+            </div>
+        </div>
+        <button class="load-more">Ver Mais</button>
+    </main>
+</body>
+</html>
