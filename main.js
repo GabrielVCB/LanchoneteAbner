@@ -1,9 +1,17 @@
-let cart = [
-    // Itens do carrinho (simulados)
-    { item: "Hambúrguer", price: 10, quantity: 1 },
-    { item: "Refrigerante", price: 5, quantity: 1 }
-];
+// script1.js
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+}
 
+const cart = [];
+
+function addToCart(item, price) {
+    cart.push({ item, price });
+    alert(`${item} foi adicionado ao carrinho.`);
+}
+
+// carrinho.js
 function goBack() {
     window.location.href = "index.html"; // Voltar para a página inicial
 }
@@ -16,8 +24,8 @@ function updateCartDisplay() {
     cartItems.innerHTML = ""; // Limpa o conteúdo atual
 
     cart.forEach((product, index) => {
-        const productHTML = `
-            <div class="cart-item">
+        const productHTML = 
+            `<div class="cart-item">
                 <img src="${product.item.toLowerCase()}.jpg" alt="${product.item}">
                 <p>${product.item} - R$ ${product.price},00</p>
                 <div class="quantity-controls">
@@ -25,8 +33,7 @@ function updateCartDisplay() {
                     <span>${product.quantity}</span>
                     <button onclick="changeQuantity(${index}, 1)">+</button>
                 </div>
-            </div>
-        `;
+            </div>`;
         cartItems.innerHTML += productHTML;
         total += product.price * product.quantity;
     });
@@ -59,3 +66,8 @@ function finalizeOrder() {
 
 // Atualiza o carrinho ao carregar a página
 document.addEventListener("DOMContentLoaded", updateCartDisplay);
+
+// pedidos.js
+document.querySelector(".load-more").addEventListener("click", () => {
+    alert("Nenhum pedido adicional encontrado no histórico.");
+});
